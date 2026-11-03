@@ -182,7 +182,7 @@
       parts.push('<p style="' + P + '">If you could come back to me by <b>' + longDay(replyBy) + '</b>, that would keep everything on track for payment on time.</p>');
     }
     parts.push('<p style="' + P + '">Thanks very much for your help.</p>');
-    parts.push('<p style="margin:0">Kind regards,<br><b>[Your name]</b><br><span style="color:#64748b">[Job title] | [Phone]</span></p>');
+    parts.push('<p style="margin:0">Kind regards,</p>');
 
     const html = '<div style="font-family:Segoe UI,Arial,sans-serif;font-size:14px;color:#1f2937;line-height:1.5;max-width:700px">\n' + parts.join('\n') + '\n</div>';
 
