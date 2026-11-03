@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <title>Invoice Authorisation Chase</title>
+</head>
+<body>
+
+  <div class="container">
+
+    <header class="text-center text-light my-4">
+      <h1 class="mb-4">Invoice Authorisation Chase</h1>
+    </header>
+
+    <div class="text-center text-light mt-4 mb-2 d-flex justify-content-center align-items-start flex-wrap">
+      <div class="compareDrop authDrop">
+        <input type="file" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+        <div class="compareHint authHint">Drop the invoice export here<br><small>(spreadsheet - or click to browse)</small></div>
+        <div class="authFile"></div>
+      </div>
+      <div class="d-flex flex-column align-items-center" style="margin-left: 20px;">
+        <a href="#" onclick="return false;" class="link-btn2 authBtn" style="margin: 10px 8px;">Generate</a>
+        <a href="#" onclick="return false;" class="link-btn authSubjectBtn" style="margin: 0 8px 10px; display: none;">Copy subject</a>
+        <label class="authRunLabel mb-0">Payment run date
+          <input type="date" class="authRunDate">
+        </label>
+      </div>
+    </div>
+
+    <div class="text-center mb-3 authStatus"></div>
+
+    <div class="authPreview mb-5" style="display: none;">
+      <div class="authSubjectRow"><b>Subject:</b> <span class="authSubject"></span></div>
+      <div class="authEmail"></div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="authchase.js"></script>
+</body>
+</html>
